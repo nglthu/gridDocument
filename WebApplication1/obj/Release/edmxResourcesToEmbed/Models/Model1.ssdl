@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="documentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="documents">
+    <Key>
+      <PropertyRef Name="idDoc" />
+    </Key>
+    <Property Name="idDoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="docName" Type="nvarchar" MaxLength="500" />
+    <Property Name="docTypeID" Type="int" />
+    <Property Name="note" Type="nvarchar" MaxLength="2500" />
+    <Property Name="confidenceScore" Type="numeric" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="duplicateDetails">
+    <Key>
+      <PropertyRef Name="idDuplicateType" />
+    </Key>
+    <Property Name="idDuplicateType" Type="int" Nullable="false" />
+    <Property Name="duplicateDetails" Type="nvarchar" MaxLength="2500" />
+  </EntityType>
+  <Association Name="FK_documents_duplicateDetails">
+    <End Role="duplicateDetails" Type="Self.duplicateDetails" Multiplicity="0..1" />
+    <End Role="documents" Type="Self.documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="duplicateDetails">
+        <PropertyRef Name="idDuplicateType" />
+      </Principal>
+      <Dependent Role="documents">
+        <PropertyRef Name="docTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="documentDBModelStoreContainer">
+    <EntitySet Name="documents" EntityType="Self.documents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="duplicateDetails" EntityType="Self.duplicateDetails" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_documents_duplicateDetails" Association="Self.FK_documents_duplicateDetails">
+      <End Role="duplicateDetails" EntitySet="duplicateDetails" />
+      <End Role="documents" EntitySet="documents" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

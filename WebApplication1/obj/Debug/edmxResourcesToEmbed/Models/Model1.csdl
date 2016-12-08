@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="documentDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="document">
+    <Key>
+      <PropertyRef Name="idDoc" />
+    </Key>
+    <Property Name="idDoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="docName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="docTypeID" Type="Int32" />
+    <NavigationProperty Name="duplicateDetail" Relationship="Self.FK_documents_duplicateDetails" FromRole="documents" ToRole="duplicateDetails" />
+    <Property Name="note" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="confidenceScore" Type="Decimal" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="duplicateDetail">
+    <Key>
+      <PropertyRef Name="idDuplicateType" />
+    </Key>
+    <Property Name="idDuplicateType" Type="Int32" Nullable="false" />
+    <Property Name="duplicateDetails" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="documents" Relationship="Self.FK_documents_duplicateDetails" FromRole="duplicateDetails" ToRole="documents" />
+  </EntityType>
+  <Association Name="FK_documents_duplicateDetails">
+    <End Role="duplicateDetails" Type="Self.duplicateDetail" Multiplicity="0..1" />
+    <End Role="documents" Type="Self.document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="duplicateDetails">
+        <PropertyRef Name="idDuplicateType" />
+      </Principal>
+      <Dependent Role="documents">
+        <PropertyRef Name="docTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="documentDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="documents" EntityType="Self.document" />
+    <EntitySet Name="duplicateDetails" EntityType="Self.duplicateDetail" />
+    <AssociationSet Name="FK_documents_duplicateDetails" Association="Self.FK_documents_duplicateDetails">
+      <End Role="duplicateDetails" EntitySet="duplicateDetails" />
+      <End Role="documents" EntitySet="documents" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

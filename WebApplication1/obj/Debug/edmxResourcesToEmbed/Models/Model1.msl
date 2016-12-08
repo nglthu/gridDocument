@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="documentDBModelStoreContainer" CdmEntityContainer="documentDBEntities">
+    <EntitySetMapping Name="documents">
+      <EntityTypeMapping TypeName="documentDBModel.document">
+        <MappingFragment StoreEntitySet="documents">
+          <ScalarProperty Name="confidenceScore" ColumnName="confidenceScore" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="idDoc" ColumnName="idDoc" />
+          <ScalarProperty Name="docName" ColumnName="docName" />
+          <ScalarProperty Name="docTypeID" ColumnName="docTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="duplicateDetails">
+      <EntityTypeMapping TypeName="documentDBModel.duplicateDetail">
+        <MappingFragment StoreEntitySet="duplicateDetails">
+          <ScalarProperty Name="idDuplicateType" ColumnName="idDuplicateType" />
+          <ScalarProperty Name="duplicateDetails" ColumnName="duplicateDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

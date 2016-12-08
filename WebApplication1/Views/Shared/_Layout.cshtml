@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Duplicate Document Grid</title>
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+
+    <link rel="stylesheet" href="~/Kendo/styles/kendo.common.min.css" />
+
+    <link rel="stylesheet" href="~/Kendo/styles/kendo.default.min.css" />
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />  
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    
+
+    <script src="~/Kendo/js/jquery.min.js"></script>
+
+    <script src="~/Kendo/js/kendo.all.min.js"></script>
+    <script src="~/Content/angular.min.js"></script>
+
+</head>
+<body>
+    <br />
+    <br />
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container" style="margin-left:20px;">
+                 
+
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container" style="margin-left:20px;">
+
+
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                   
+                                             
+                                            <li>@Html.ActionLink("Document Grid","Index","Home")</li>
+                                            <li>@Html.ActionLink("High Level Of Info", "HighLevelOfInfo", "Home")</li>
+                                 
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    }
+
+                </div>
+            
+        </div>
+    </div>
+
+    <div id="container" class="container body-content">
+        @RenderBody()
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year </p>
+    </footer>
+
+    @*@RenderSection("scripts", required: false)*@
+
+    <script >
+
+        $('.dropdown-submenu > a').submenupicker();
+    </script>
+</body>
+</html>

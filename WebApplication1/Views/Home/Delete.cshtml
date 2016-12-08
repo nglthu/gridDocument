@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.document
+
+    @{
+        ViewBag.Title = "Delete";
+    }
+
+    <h2>Delete a duplicate document:</h2>
+
+    <h2>Are you sure you want to delete this?</h2>
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.docName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.docName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.note)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.note)
+            </dd>
+
+
+
+        </dl>
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-primary" /> |
+
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+
+
+
+
+    @section Scripts {
+
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }

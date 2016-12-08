@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="duplicateUI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\workPortfolio\\pingar\\code\\gridDocument\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\workPortfolio\\pingar\\code\\gridDocument\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="documentDBEntities-Web.config Connection String" description="" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:iyiid5jnn6.database.windows.net,1433;Initial Catalog=duplicateUI_db;User Id=nglthu@iyiid5jnn6;Password=culkin79&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\workPortfolio\\pingar\\code\\gridDocument\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='documentDBEntities']/@connectionString" />
+  </parameter>
+</parameters>

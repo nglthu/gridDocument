@@ -1,0 +1,137 @@
+﻿@model WebApplication1.Models.document
+
+@{
+
+    ViewBag.Title = "Document List";
+
+}
+
+<legend>Document List</legend>
+
+
+<div id="documentGrid" style="width: 100%; font-size: 12px"></div>
+
+
+<script type="text/javascript">
+
+    var duplicateTypeList = @Html.Raw(Json.Encode(ViewBag.duplicateType)) ;
+
+    $(document).ready(function () {
+
+        var grid = $("#documentGrid").kendoGrid({
+            selectable: "single row",
+            
+            allowCopy: true,
+            dataSource: new kendo.data.DataSource({
+                autoSync: false,
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Url.Action("GetDocumentData", "Home")",
+                        dataType: "json"
+                    },
+                    update: {
+                        url: "@Url.Action("UpdateDocumentData", "Home")",
+                        dataType: "json",
+                        type: "POST",
+                        complete: function () {
+                            grid.dataSource.read();
+                        }
+                    },
+
+
+                },
+              
+                schema: {
+                    errors: "errors",
+                    model: {
+                        id: "idDoc",
+                        fields:
+                            {
+                                idDoc: { editable: false },
+                                docName: {
+                                    style: "text-align: center",
+                                    type: "string",
+                                    validation: { required: true }
+                                },
+                                docTypeID: {
+                                    style: "text-align: center",
+                                    type: "number",
+                                    validation: { required: true }
+                                },
+                                note: {
+                                    style: "text-align: center",
+                                    type: "string",
+                                    validation: { required: true }
+                                },
+                                confidenceScore: {
+                                    style: "text-align: center",
+                                    type: "number",
+                                    validation: { required: true }
+                                }
+                            }
+                    }
+
+                }
+
+            }),
+            editable: "popup",
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+            reorderable: true,
+            groupable: true,
+            filterable: true,
+            sortable: true,
+            //toolbar: ["create"],
+            columns: [
+
+                        {field: "docName", title: "Document Name", width: 50},
+
+                        {field: "docTypeID", title: "Duplicate Info", values: duplicateTypeList, width: 150, attributes: { "class": "table-cell", style: "text-align: left" }
+                         
+                        },
+                        { field: "confidenceScore", title:"Confidence Score", width: 50 },
+                        { field: "note", title: "Note", width: 80 },
+
+             {
+
+                 command: [
+                    "edit",
+                    {
+
+                        name: "Delete",
+
+                        click: function (e) {
+
+                            e.preventDefault();
+                            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+                            window.location.href = "@Url.Action("Delete", "Home")" + "/" + dataItem.idDoc;
+                        }
+                    }
+                 ], title: " ", width: 60
+
+             }]
+
+        }).data("kendoGrid");
+
+        $("#documentGrid").kendoTooltip({
+
+            filter: "td:nth-child(5), td:nth-child(7)", //this filter selects the first column cells
+            position: "bottom",
+            width: 250,
+            showAfter: 500,
+            content: function (e) {
+                var dataItem = $("#documentGrid").data("kendoGrid").dataItem(e.target.closest("tr"));
+                var content = "<div style=\"text-align:left\" \"width:250\">" + dataItem.docName;
+                return content
+            }
+
+        }).data("kendoTooltip");
+
+    });
+
+</script>
+
