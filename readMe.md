@@ -3,6 +3,7 @@
 I assumed that  documents have been checked by __'s software for duplication, then document and its information will be saved in the cloud database.
 Here, as an example, outputs of documents after processing from __'s software are saved in SQL as below: 
 
+![alt text](https://github.com/nglthu/gridDocument/blob/master/img/db.png)
 
 The task is to create UI as a grid for:
 1.  Presenting a list or grid of documents
@@ -216,24 +217,33 @@ The grid view has been coded as below:
 
 #### How user can search for information:
 Every column has fully functioned for filtering and sorting the data, then users can search any information based on its filtering option. 
+
 +Sorting by double click on every column you want to be sorted. 
 +Filtering by clicking "filter symbol": 
 
+![alt text](https://github.com/nglthu/gridDocument/blob/master/img/filter.png)
+
 Fig. 1 Grid with supported filtering and sorting.
-+To search any information, you can click filtering in different column and type the value you want to find.
+
++ To search any information, you can click filtering in different column and type the value you want to find.
 + Filter by the different duplicate types (identical, near duplicate etc...): you can click in the Duplicate Info, and choose the different duplicate type for filtering.
+
+![alt text](https://github.com/nglthu/gridDocument/blob/master/img/figure2_filterList.png)
 
 Fig. 2 Selected Option of Filtering by the different duplicate types (identical, near duplicate etc...)
 
-+High level info e.g. - How many duplicates found in total and for each category: is shown in the High Level of Info Tab on the website
++ High level info e.g. - How many duplicates found in total and for each category: is shown in the High Level of Info Tab on the website
 
+![alt text](https://github.com/nglthu/gridDocument/blob/master/img/figure3_highLevel.png)
 
 
 Fig. 3 Selected High Level of Information with counting
 
 
-+Option to filter by 'confidence score' 0 - 1 (score .95 means we are 95% sure the
++ Option to filter by 'confidence score' 0 - 1 (score .95 means we are 95% sure the
 Files are duplicates): You can filter by the Confidence Score. Here, the filter is provided with different function like equal, is greater than or equal, is less than or equal, and so on.
+
+![alt text](https://github.com/nglthu/gridDocument/blob/master/img/figure4_OptionOfFilter.png)
 
 Fig. 4 Option of filtering by Confidence Score with different ways of conditions
 
