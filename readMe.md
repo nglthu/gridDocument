@@ -213,7 +213,7 @@ The grid view has been coded as below:
 </script>
 ```
 
-### Bussiness Logic
+### Business Logic
 
 #### How user can search for information:
 
