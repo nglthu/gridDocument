@@ -80,6 +80,7 @@ The grid view has been coded as below:
     ViewBag.Title = "Document List";
 
 }
+```
 
 <legend>Document List</legend>
 
@@ -209,6 +210,7 @@ The grid view has been coded as below:
     });
 
 </script>
+```
 
 ### Bussiness Logic
 
