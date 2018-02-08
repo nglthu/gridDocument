@@ -15,11 +15,11 @@ files are duplicates)
 
 ## Solution
 
-Firstly, ASP.NET MVC, Entity Framework, JavaScript, Kendo UI, HTML are used to achieve the task above. (However, this task has not been limited by ASP.NET C# MVC; it can be done by Java if required)
+Firstly, ASP.NET MVC C#, Entity Framework, JavaScript, Kendo UI, Linq, HTML are used to achieve the task above. However, this task has not been limited by ASP.NET C# MVC; it can be done by Java if required.
 
 ###  Grid of Documents
 
-The input for grid is JSON type. Grid is read or updated data from actions of GetDocumentData and UpdateDocumentData.
+The input for grid is JSON type. Grid is to read or update data from actions of GetDocumentData and UpdateDocumentData.
 public JsonResult GetDocumentData()
         {
             try
@@ -216,10 +216,11 @@ The grid view has been coded as below:
 ### Bussiness Logic
 
 #### How user can search for information:
+
 Every column has fully functioned for filtering and sorting the data, then users can search any information based on its filtering option. 
 
-+Sorting by double click on every column you want to be sorted. 
-+Filtering by clicking "filter symbol": 
++ Sorting by double click on every column you want to be sorted. 
++ Filtering by clicking "filter symbol": 
 
 ![alt text](https://github.com/nglthu/gridDocument/blob/master/img/filter.png)
 
@@ -232,7 +233,7 @@ Fig. 1 Grid with supported filtering and sorting.
 
 Fig. 2 Selected Option of Filtering by the different duplicate types (identical, near duplicate etc...)
 
-+ High level info e.g. - How many duplicates found in total and for each category: is shown in the High Level of Info Tab on the website
++ High level info,  e.g. - How many duplicates found in total and for each category, is shown in the High Level of Info Tab on the website
 
 ![alt text](https://github.com/nglthu/gridDocument/blob/master/img/figure3_highLevel.png)
 
@@ -247,8 +248,10 @@ Files are duplicates): You can filter by the Confidence Score. Here, the filter 
 
 Fig. 4 Option of filtering by Confidence Score with different ways of conditions
 
-## Code Project File and Demo
+## Released Code Project File (version v.1.0) and Demo
 
 + Demo has been captured by opening a file namely demo5.wmv.
 + To run the project, please using the local database (documentDB as attached) for demo and changing connection string in the project.
-+ The code has been zipped in a file namely gridDocument.zip.
++ The code has been released by a first version of  gridDocument-1.0.zip
+
+## Wish you enjoy !!
