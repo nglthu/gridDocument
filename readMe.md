@@ -97,8 +97,6 @@ The grid view has been coded as below:
     ViewBag.Title = "Document List";
 
 }
-```C#
-```C#
 
 <legend>Document List</legend>
 
