@@ -226,7 +226,7 @@ The grid view has been coded as below:
     });
 
 </script>
-```C#
+```
 
 ### Business Logic
 
