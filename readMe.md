@@ -7,7 +7,7 @@
 [stars badge]:https://img.shields.io/github/stars/hey-red/Markdown.svg
 [issues badge]:https://img.shields.io/github/issues/hey-red/Markdown.svg
 
-[licence]:https://github.com/nglthu/gridDocument/blob/master/LICENCE
+[licence]:https://github.com/nglthu/gridDocument/blob/master/LICENSE
 [stars]:https://github.com/nglthu/gridDocument/stargazers
 [issues]:https://github.com/nglthu/gridDocument/issues
 
