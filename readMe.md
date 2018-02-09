@@ -1,3 +1,18 @@
+
+[![licence badge]][licence]
+[![stars badge]][stars]
+[![issues badge]][issues]
+
+[licence badge]:https://img.shields.io/badge/license-MIT-blue.svg
+[stars badge]:https://img.shields.io/github/stars/hey-red/Markdown.svg
+[issues badge]:https://img.shields.io/github/issues/hey-red/Markdown.svg
+
+[licence]:https://github.com/nglthu/gridDocument/blob/master/LICENCE
+[stars]:https://github.com/nglthu/gridDocument/stargazers
+[issues]:https://github.com/nglthu/gridDocument/issues
+
+
+
 # Grid 
 ## Assumption and task
 I assumed that  documents have been checked by __'s software for duplication, then document and its information will be saved in the cloud database.
@@ -20,6 +35,7 @@ Firstly, ASP.NET MVC C#, Entity Framework, JavaScript, Kendo UI, Linq, HTML are 
 ###  Grid of Documents
 
 The input for grid is JSON type. Grid is to read or update data from actions of GetDocumentData and UpdateDocumentData.
+```C#
 public JsonResult GetDocumentData()
         {
             try
@@ -81,7 +97,8 @@ The grid view has been coded as below:
     ViewBag.Title = "Document List";
 
 }
-```
+```C#
+```C#
 
 <legend>Document List</legend>
 
@@ -211,7 +228,7 @@ The grid view has been coded as below:
     });
 
 </script>
-```
+```C#
 
 ### Business Logic
 
