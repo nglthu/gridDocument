@@ -270,7 +270,7 @@ Fig. 3 Selected High Level of Information with counting
 Files are duplicates): You can filter by the Confidence Score. Here, the filter is provided with different function like equal, is greater than or equal, is less than or equal, and so on.
 
 
-<img src="https://nglthu.github.io/gridDocument/img/figure4_OptionOfFilter.png" style="width:85%;height:85%;">
+<img src="https://nglthu.github.io/gridDocument/img/figure4_OptionOfFilter.png" style="width:75%;height:75%;">
 
 Fig. 4 Option of filtering by Confidence Score with different ways of conditions
 
