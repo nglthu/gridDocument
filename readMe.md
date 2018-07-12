@@ -39,6 +39,7 @@ Firstly, ASP.NET MVC C#, Entity Framework, JavaScript, Kendo UI, Linq, HTML are 
 
 The input for grid is JSON type. Grid is to read or update data from actions of GetDocumentData and UpdateDocumentData.
 <div id="documentGrid" style="width: 100%; font-size: 12px">
+
 ```C#
 public JsonResult GetDocumentData()
         {
@@ -67,7 +68,9 @@ public JsonResult GetDocumentData()
             }
 
         }
+```        
 And Update documents:
+```C#
   [HttpPost]
 
         public JsonResult UpdateDocumentData(document model)
@@ -93,7 +96,7 @@ And Update documents:
             return Json(model);
         }
 
-
+```
 The inputs for grid contains fields of idDoc, docTypeID, note, and confidenceScore
 The grid view has been coded as below:
 @model WebApplication1.Models.document
@@ -103,6 +106,7 @@ The grid view has been coded as below:
     ViewBag.Title = "Document List";
 
 }
+```C#
 </div>
 <legend>Document List</legend>
 
