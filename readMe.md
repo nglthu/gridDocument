@@ -272,7 +272,7 @@ Files are duplicates): You can filter by the Confidence Score. Here, the filter 
 
 <img src="https://nglthu.github.io/gridDocument/img/figure4_OptionOfFilter.png" style="width:75%;height:75%;">
 
-Fig. 4 Option of filtering by Confidence Score with different ways of conditions
+<center> Fig. 4 Option of filtering by Confidence Score with different ways of conditions </center>
 
 ## Released Code Project File (version v.1.0) and Demo
 
