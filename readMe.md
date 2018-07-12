@@ -15,11 +15,13 @@
 
 
 # Grid 
+
 ## Assumption and task
 I assumed that  documents have been checked by __'s software for duplication, then document and its information will be saved in the cloud database.
 Here, as an example, outputs of documents after processing from __'s software are saved in SQL as below: 
 
-![alt text](https://nglthu.github.io/gridDocument/img/db.png)
+
+<img src="https://nglthu.github.io/gridDocument/img/db.png" style="width:90%;height:90%;">
 
 The task is to create UI as a grid for:
 1.  Presenting a list or grid of documents
@@ -238,20 +240,20 @@ Every column has fully functioned for filtering and sorting the data, then users
 + Sorting by double click on every column you want to be sorted. 
 + Filtering by clicking "filter symbol": 
 
-<img src="https://nglthu.github.io/gridDocument/img/filter.png" width="100%" height="100%">
+<img src="https://nglthu.github.io/gridDocument/img/filter.png" style="width:90%;height:90%;">
 
 Fig. 1 Grid with supported filtering and sorting.
 
 + To search any information, you can click filtering in different column and type the value you want to find.
 + Filter by the different duplicate types (identical, near duplicate etc...): you can click in the Duplicate Info, and choose the different duplicate type for filtering.
 
-<img src="https://nglthu.github.io/gridDocument/img/figure2_filterList.png" width="100%" heigh="100%">
+<img src="https://nglthu.github.io/gridDocument/img/figure2_filterList.png" style="width:90%;height:90%;">
 
 Fig. 2 Selected Option of Filtering by the different duplicate types (identical, near duplicate etc...)
 
 + High level info,  e.g. - How many duplicates found in total and for each category, is shown in the High Level of Info Tab on the website
 
-<img src="https://nglthu.github.io/gridDocument/img/figure3_highLevel.png" width="100%" heigh="100%">
+<img src="https://nglthu.github.io/gridDocument/img/figure3_highLevel.png" style="width:90%;height:90%;">
 
 
 Fig. 3 Selected High Level of Information with counting
