@@ -38,6 +38,7 @@ Firstly, ASP.NET MVC C#, Entity Framework, JavaScript, Kendo UI, Linq, HTML are 
 ###  Grid of Documents
 
 The input for grid is JSON type. Grid is to read or update data from actions of GetDocumentData and UpdateDocumentData.
+<div id="documentGrid" style="width: 100%; font-size: 12px">
 ```C#
 public JsonResult GetDocumentData()
         {
@@ -91,6 +92,8 @@ And Update documents:
 
             return Json(model);
         }
+
+
 The inputs for grid contains fields of idDoc, docTypeID, note, and confidenceScore
 The grid view has been coded as below:
 @model WebApplication1.Models.document
@@ -100,7 +103,7 @@ The grid view has been coded as below:
     ViewBag.Title = "Document List";
 
 }
-
+</div>
 <legend>Document List</legend>
 
 
@@ -262,7 +265,8 @@ Fig. 3 Selected High Level of Information with counting
 + Option to filter by 'confidence score' 0 - 1 (score .95 means we are 95% sure the
 Files are duplicates): You can filter by the Confidence Score. Here, the filter is provided with different function like equal, is greater than or equal, is less than or equal, and so on.
 
-![alt text](https://nglthu.github.io/gridDocument/img/figure4_OptionOfFilter.png)
+
+<img src="https://nglthu.github.io/gridDocument/img/figure4_OptionOfFilter.png" style="width:90%;height:90%;">
 
 Fig. 4 Option of filtering by Confidence Score with different ways of conditions
 
