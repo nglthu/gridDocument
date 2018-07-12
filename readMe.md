@@ -102,7 +102,7 @@ The grid view has been coded as below:
 <legend>Document List</legend>
 
 
-<div id="documentGrid" style="width: 100%; font-size: 12px"></div>
+<div id="documentGrid" style="width: 100%; font-size: 12px">
 
 
 <script type="text/javascript">
@@ -228,7 +228,7 @@ The grid view has been coded as below:
 
 </script>
 ```
-
+</div>
 ### Business Logic
 
 #### How user can search for information:
@@ -238,20 +238,20 @@ Every column has fully functioned for filtering and sorting the data, then users
 + Sorting by double click on every column you want to be sorted. 
 + Filtering by clicking "filter symbol": 
 
-![alt text](https://nglthu.github.io/gridDocument/img/filter.png)
+<img src="https://nglthu.github.io/gridDocument/img/filter.png" width="100%" height="100%">
 
 Fig. 1 Grid with supported filtering and sorting.
 
 + To search any information, you can click filtering in different column and type the value you want to find.
 + Filter by the different duplicate types (identical, near duplicate etc...): you can click in the Duplicate Info, and choose the different duplicate type for filtering.
 
-![alt text](https://nglthu.github.io/gridDocument/img/figure2_filterList.png)
+<img src="https://nglthu.github.io/gridDocument/img/figure2_filterList.png" width="100%" heigh="100%">
 
 Fig. 2 Selected Option of Filtering by the different duplicate types (identical, near duplicate etc...)
 
 + High level info,  e.g. - How many duplicates found in total and for each category, is shown in the High Level of Info Tab on the website
 
-![alt text](https://nglthu.github.io/gridDocument/img/figure3_highLevel.png)
+<img src="https://nglthu.github.io/gridDocument/img/figure3_highLevel.png" width="100%" heigh="100%">
 
 
 Fig. 3 Selected High Level of Information with counting
