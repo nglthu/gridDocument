@@ -16,6 +16,8 @@
 
 # Grid 
 
+A grid of information supported with filter, sort, and search, built using ASP.NET, C# MVC, and Kendo UI, entities framework.
+
 ## Assumption and task
 I assumed that  documents have been checked by __'s software for duplication, then document and its information will be saved in the cloud database.
 Here, as an example, outputs of documents after processing from __'s software are saved in SQL as below: 
