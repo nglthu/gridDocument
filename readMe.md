@@ -1,4 +1,4 @@
-[Home]( https://nglthu.github.io/RoadMaps/myRoadMaps/)
+
 
 [![licence badge]][licence]
 [![stars badge]][stars]
@@ -13,6 +13,11 @@
 [issues]:https://github.com/nglthu/gridDocument/issues
 
 
+[![Home badge]][home]
+
+[Home badge]:https://nglthu.github.io/Home-icon/img/home-icon-trans.png
+
+[Home]:http://blog.lethunguyen.com
 
 # Grid 
 
